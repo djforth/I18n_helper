@@ -1,20 +1,48 @@
 {
-  "name": "@djforth/I18n_helper.js",
+  "name": "@djforth/I18n_helper",
   "version": "1.0.0",
-  "description": "",
+  "description": "Little helper for I18n-js",
   "main": "index.js",
+  "repository": "https://github.com/djforth/I18n_helper.js.git",
+  "author": "Adrian Stainforth <adrian.stainforth@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@djforth/ap_karma_wp": "^1.0.4",
+    "@djforth/ap_utils": "^3.0.1",
+    "@djforth/jasmine-call-helpers": "^2.0.0-beta",
+    "@djforth/stubs-spy-manager": "^3.0.1-beta1",
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.8",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-lodash": "^3.2.10",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-es2016": "^6.16.0",
+    "babel-preset-es2017": "^6.16.0",
+    "babel-template": "^6.16.0",
+    "babel-types": "^6.19.0",
+    "eslint": "^3.10.2",
+    "eslint-config-google": "^0.7.0",
+    "eslint-config-morsedigital": "^1.1.0",
+    "immutable": "^3.8.1",
+    "jasmine-core": "^2.5.2",
+    "lodash": "^4.17.2",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "peerDependencies": {
+    "i18n-js": "http://github.com/fnando/i18n-js/archive/v3.0.0.rc14.tar.gz"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/djforth/I18n_helper.js.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/djforth/I18n_helper.js/issues"
-  },
-  "homepage": "https://github.com/djforth/I18n_helper.js#readme"
+    "build": "babel src -x '.js' -d lib",
+    "build:watch": "babel src -x '.js' -w --source-maps  -d lib",
+    "js": "webpack --config webpack/webpack.config.js",
+    "lint": "eslint src/**",
+    "lint:tests": "eslint spec/**",
+    "test": "asset-pipeline-karma",
+    "test:mac": "asset-pipeline-karma -b",
+    "test:watch": "asset-pipeline-karma -w"
+  }
 }

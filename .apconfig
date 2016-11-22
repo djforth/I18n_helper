@@ -1,0 +1,5 @@
+{
+  "karma": {
+    "input": "./spec/index_spec.js"
+  }
+}
