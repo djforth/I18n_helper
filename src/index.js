@@ -11,11 +11,11 @@ const manageTranslations = (root = 'react')=>(section)=>{
   };
 };
 
-export default manageTranslations;
-
 export const actionsTranslation = (item)=>{
-  var t = manageTranslations()('action_btns');
-  var type = manageTranslations()(item)('title');
+  let t = manageTranslations()('action_btns');
+  let type = manageTranslations()(item)('title');
 
   return t('add', {type});
 };
+
+export default manageTranslations;

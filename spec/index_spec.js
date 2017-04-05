@@ -93,7 +93,6 @@ describe('TranslationHelper', function(){
       actionsTranslation('foo');
     });
 
-    console.log(callHelper)
     callHelper.add([
       [{stub: 'manageTranslations', count: 2}]
       , [{spy: 'translation', count: 2}]

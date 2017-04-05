@@ -1,0 +1,6 @@
+{
+  "extends": "morsedigital"
+  , "globals":{
+    "I18n": true
+  }
+}
