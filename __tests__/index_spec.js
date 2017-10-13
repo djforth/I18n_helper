@@ -2,9 +2,9 @@ import translationHelpers, {actionsTranslation} from '../src';
 
 import _ from 'lodash';
 
-import JasmineCallHelper from '@djforth/jasmine-call-helpers';
+import JasmineCallHelper from '@djforth/jest-call-helpers';
 
-import SpyManager from '@djforth/stubs-spy-manager';
+import SpyManager from '@djforth/stubs-spy-manager-jest';
 const stubs_spies = SpyManager(translationHelpers);
 const callHelper = JasmineCallHelper(stubs_spies);
 
