@@ -1,5 +1,5 @@
 
-const manageTranslations = (root = 'react')=>(section)=>{
+export const manageTranslations = (root = 'react')=>(section)=>{
   return (key, options = {})=>{
     if (!I18n) return (options.defaultValue) ? options.defaultValue : '';
     let t_key = `${root}.${section}`;
@@ -17,5 +17,3 @@ export const actionsTranslation = (item)=>{
 
   return t('add', {type});
 };
-
-export default manageTranslations;
