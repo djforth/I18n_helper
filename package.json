@@ -2,7 +2,7 @@
   "name": "@morsedigital/i18n_helper",
   "version": "1.2.0",
   "description": "Little helper for I18n-js",
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": "https://github.com/morsedigital/I18n_helper.git",
   "author": "Adrian Stainforth <adrian.stainforth@gmail.com>",
   "license": "MIT",
