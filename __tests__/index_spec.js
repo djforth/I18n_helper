@@ -1,4 +1,7 @@
-import translationHelpers, {actionsTranslation} from '../src';
+import translationHelpers, {
+  actionsTranslation,
+  manageTranslations
+} from '../src';
 
 import _ from 'lodash';
 
@@ -26,7 +29,7 @@ describe('TranslationHelper', function(){
   describe('set root', function(){
     let root;
     beforeEach(()=>{
-      root = translationHelpers('root');
+      root = manageTranslations('root');
     });
 
     it('should return function', function(){
@@ -37,7 +40,7 @@ describe('TranslationHelper', function(){
   describe('set section', function(){
     let section;
     beforeEach(()=>{
-      section = translationHelpers('root')('section');
+      section = manageTranslations('root')('section');
     });
 
     it('should return function', function(){
@@ -48,7 +51,7 @@ describe('TranslationHelper', function(){
   describe('get translation', function(){
     let translation;
     beforeEach(()=>{
-      translation = translationHelpers('root')('section')('mytranslation', {defaultValue: 'foo'});
+      translation = manageTranslations('root')('section')('mytranslation', {defaultValue: 'foo'});
     });
 
     it('should return key', function(){
@@ -57,13 +60,13 @@ describe('TranslationHelper', function(){
 
     it('should return empty string if translation not implemented', function(){
       window.I18n = null;
-      translation = translationHelpers('root')('section')('mytranslation');
+      translation = manageTranslations('root')('section')('mytranslation');
       expect(translation).toEqual('');
     });
 
     it('should return default string if translation not implemented & default applied', function(){
       window.I18n = null;
-      translation = translationHelpers('root')('section')('mytranslation', {defaultValue: 'foo'});
+      translation = manageTranslations('root')('section')('mytranslation', {defaultValue: 'foo'});
       expect(translation).toEqual('foo');
     });
 

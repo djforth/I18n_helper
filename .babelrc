@@ -3,15 +3,7 @@
   "env": {
     "test": {
       "plugins": [
-        [
-          "istanbul",
-          {
-            "exclude": [
-              "**/*.spec.js",
-              "__tests__/**/*.js"
-            ]
-          }
-        ],
+        "istanbul",
         "rewire"
       ],
       "presets": [
