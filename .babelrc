@@ -23,12 +23,11 @@
     },
     "production": {
       "plugins": [
-        "lodash",
-        "add-module-exports"
+        "lodash"
       ]
       , "presets": [
         ["env", {
-          modules: "umd",
+          modules: false,
           "targets": {
               'node': 4,
               "browsers": [

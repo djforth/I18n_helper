@@ -1,5 +1,5 @@
 {
-  "extends": "morsedigital-jest"
+  "extends": "morsedigital-prettier"
   , "globals":{
     "I18n": true
   }
