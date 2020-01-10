@@ -1,29 +1,37 @@
 {
   "browser": true,
-  "collectCoverageFrom": ["<rootDir>/src/**/*.{js,jsx}", "!<rootDir>/__tests__/__dummy__/test.js"],
-  "coveragePathIgnorePatterns": ["<rootDir>/node_modules/", "<rootDir>/__tests__/__helpers__/", "<rootDir>/__tests__/__dummy__/"],
+  "collectCoverageFrom": [
+    "<rootDir>/src/**/*.{js,jsx}"
+  ],
+  "coveragePathIgnorePatterns": [
+    "<rootDir>/node_modules/",
+    "<rootDir>/__tests__/",
+    "<rootDir>/__tests__/__helpers__"
+  ],
   "roots": [
     "<rootDir>/__tests__/",
     "<rootDir>/src/"
   ],
+  "moduleNameMapper": {
+    "i18n-js": "<rootDir>/__mocks__/i18n-js"
+  },
   "modulePaths": [
     "<rootDir>/src/"
   ],
   "modulePathIgnorePatterns": [
     "<rootDir>/lib/",
-    "<rootDir>/node_modules/",
-    "<rootDir>/__tests__/__helpers__/",
-    "<rootDir>/__tests__/__dummy__/",
-    "<rootDir>/__tests__/__setups__/"
+    "<rootDir>/node_modules/"
   ],
-  "setupTestFrameworkScriptFile": "@djforth/jest-matchers",
+  "setupFilesAfterEnv": [
+    "@djforth/jest-matchers"
+  ],
   "testPathIgnorePatterns": [
+    "<rootDir>/__tests__/setupTests.js",
+    "<rootDir>/__tests__/__helpers__",
     "<rootDir>/__tests__/__dummy__",
-    "<rootDir>/__helpers__",
     "<rootDir>/lib",
     "<rootDir>/node_modules",
-    "<rootDir>/bower_components",
-    "<rootDir>/webpack"
+    "<rootDir>/__mocks__"
   ],
   "verbose": true
 }
