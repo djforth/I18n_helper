@@ -1,6 +1,6 @@
 {
   "name": "@morsedigital/i18n_helper",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "description": "Little helper for I18n-js",
   "main": "index.js",
   "repository": "https://github.com/morsedigital/I18n_helper.git",
