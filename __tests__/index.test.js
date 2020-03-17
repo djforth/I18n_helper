@@ -1,6 +1,7 @@
+import I18n from 'i18n-js';
 import tHelpers from '../src';
 
-import I18n from 'i18n-js';
+global.I18n = I18n;
 
 describe('TranslationHelper', function() {
   describe('Set translations', () => {

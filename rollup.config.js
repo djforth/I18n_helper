@@ -1,7 +1,7 @@
 // rollup.config.js
 import { terser } from 'rollup-plugin-terser';
 import alias from '@rollup/plugin-alias';
-import analyze from 'rollup-plugin-analyzer';
+import analyse from 'rollup-plugin-analyzer';
 import auto from '@rollup/plugin-auto-install';
 import autoExternal from 'rollup-plugin-auto-external';
 import babel from 'rollup-plugin-babel';
@@ -55,7 +55,7 @@ export default {
     }),
     terser(),
     banner('i18n Helper v<%= pkg.version %> by <%= pkg.author %>'),
-    analyze()
+    analyse()
   ],
   external: ['i18n-js', 'lodash/isPlainObject', 'lodash'],
 

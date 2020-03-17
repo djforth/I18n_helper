@@ -1,4 +1,5 @@
-import I18n from 'i18n-js';
+// import I18n from 'i18n-js';
+/* global I18n */
 import { isPlainObject } from 'lodash';
 
 const isString = str => typeof str === 'string';
@@ -30,7 +31,9 @@ const translator = (...items) => {
       return translator(keys.join('.'), opts, ...newItems);
     };
   }
-
+  if (keys.join('.').match(/[A-Z]/)) {
+    console.log('key >>>>>>', keys.join('.'));
+  }
   return I18n.t(keys.join('.'), opts);
 };
 
